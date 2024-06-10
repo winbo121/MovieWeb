@@ -11,7 +11,7 @@ body {
  width: 100vw;
 }
 
-/*ºäÆ÷Æ® º¯°æ½Ã ÀÚµ¿À¸·Î ÆùÆ® Å©±â Á¶Àý ¹æÁö*/
+/*ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ® Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½*/
 html {
  -webkit-text-size-adjust: none;
  -moz-text-size-adjust: none;
@@ -35,10 +35,12 @@ html, #root {
     top: 15%;
 }
 
-#Home span {
- display: block;
- font-size: .4em;
- opacity: .8;
+#Home span>img {
+/*  display: block; */
+/*  font-size: .4em; */
+/*  opacity: .8; */
+    transform: translate(-50%);
+    left: 50%;
 }
 
 #Home div {
@@ -52,7 +54,7 @@ html, #root {
 
 #Home .movie__Poster {
  max-width: 100%;
- height: 450px;
+ height: 600px;
  position: relative;
  top: -20px;
  box-shadow: -10px 19px 38px rgba(83, 83, 83, 0.3), 10px 15px 12px
