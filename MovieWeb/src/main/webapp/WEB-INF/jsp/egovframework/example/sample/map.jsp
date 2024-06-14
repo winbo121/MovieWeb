@@ -28,7 +28,7 @@
 		</div>
 
 		<script type="text/javascript"
-			src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f3e1b7156e65df896b6e836e9252e216&libraries=services"></script>
+			src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d46dc8c6a076989a9a4da269e118c059&libraries=services"></script>
 		<script>
 			var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 			mapOption = {

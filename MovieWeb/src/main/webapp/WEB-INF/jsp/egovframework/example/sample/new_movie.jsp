@@ -2,10 +2,39 @@
 	pageEncoding="UTF-8"%>
 <script type="text/javascript">
 
+var now1=new Date();
+
+var now2=new Date();
+
+var day11 = new Date(now1.setDate(now1.getDate() - 7));	// 7일전
+
+var day22 = new Date(now2.setDate(now2.getDate() - 1));	// 어제
+
+/**
+ *  yyyyMMdd 포맷으로 반환
+ */
+function getFormatDate(date){
+    var year = date.getFullYear();              //yyyy
+    var month = (1 + date.getMonth());          //M
+    month = month >= 10 ? month : '0' + month;  //month 두자리로 저장
+    var day = date.getDate();                   //d
+    day = day >= 10 ? day : '0' + day;          //day 두자리로 저장
+    return  year + '-' + month + '-' + day;       //'-' 추가하여 yyyy-mm-dd 형태 생성 가능
+}
+
+var day1=getFormatDate(day11);
+
+var day2=getFormatDate(day22);
+
+
+console.log(day1);
+
+console.log(day2);
+
 $.ajax({
 	
 	type:"get",
-	url:"https://api.themoviedb.org/3/discover/movie?api_key=9ad6e90979035c5eda25f7a40305c3dd&primary_release_date.gte=2020-03-01&primary_release_date.lte=2020-03-07&language=ko-KR&page=1",
+	url:"https://api.themoviedb.org/3/discover/movie?api_key=9ad6e90979035c5eda25f7a40305c3dd&primary_release_date.gte="+day1+"&primary_release_date.lte="+day2+"&language=ko-KR&page=1",
 	dataType:"json",
 	data:JSON.stringify({
 		
@@ -76,7 +105,7 @@ $(window).scroll(function() {
     	$.ajax({
     		
     		type:"get",
-			url:"https://api.themoviedb.org/3/discover/movie?api_key=9ad6e90979035c5eda25f7a40305c3dd&primary_release_date.gte=2020-02-27&primary_release_date.lte=2020-02-29&language=ko-KR&page="+(page++),
+			url:"https://api.themoviedb.org/3/discover/movie?api_key=9ad6e90979035c5eda25f7a40305c3dd&primary_release_date.gte="+day1+"&primary_release_date.lte="+day2+"&language=ko-KR&page="+(page++),
 			dataType:"json",
 			data:JSON.stringify({
 				

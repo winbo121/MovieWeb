@@ -6,10 +6,27 @@
 
 	var i=0;
 	var arr = new Array();
-	var day1=new Date();
+	var now=new Date();
+	
+	var day1 = new Date(now.setDate(now.getDate() - 1));	// 어제
+	
+	/**
+	 *  yyyyMMdd 포맷으로 반환
+	 */
+	function getFormatDate(date){
+	    var year = date.getFullYear();              //yyyy
+	    var month = (1 + date.getMonth());          //M
+	    month = month >= 10 ? month : '0' + month;  //month 두자리로 저장
+	    var day = date.getDate();                   //d
+	    day = day >= 10 ? day : '0' + day;          //day 두자리로 저장
+	    return  year + '' + month + '' + day;       //'-' 추가하여 yyyy-mm-dd 형태 생성 가능
+	}
+	
+	var day2=getFormatDate(day1);
 
-	var day2=day1.getFullYear()+"0"+(day1.getMonth()+1)+"0"+(day1.getDate()-1);
-		
+	
+	console.log(day2);
+	
 	$.ajax({
 		type:"get",
 		url:"https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.xml?key=03327beb2f3ba87dc62d9427fc7f89f0&targetDt="+day2,

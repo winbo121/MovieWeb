@@ -6,7 +6,7 @@
 <script type='text/javascript'>
 	//<![CDATA[
 	// 사용할 앱의 JavaScript 키를 설정해 주세요.
-	Kakao.init("f3e1b7156e65df896b6e836e9252e216");
+	Kakao.init("d46dc8c6a076989a9a4da269e118c059");
 
 	function sendLink() {
 		Kakao.Link
@@ -56,31 +56,11 @@
 	<ul class="flBtn-second">
 	<li><a id="kakao-link-btn" href="javascript:sendLink()" tooltip="kakao"> <img
 		src="css/egovframework/img/kakao-talk.svg" style="width: 20px; height: 40px;"></a></li>
-		<li><a href="javascript:shareFB();" tooltip="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+<!-- 		<li><a href="javascript:shareFB();" tooltip="Facebook"><i class="fab fa-facebook-f"></i></a></li> -->
 
-		<script type="text/javascript">
-		
-			// 모바일 공유
-			function share_band(content, url){
-			    content = content + " " + url;
-			    var param = 'create/post?text=' + encodeURIComponent(content);
-			    if (navigator.userAgent.match(/android/i)) {
-			        setTimeout(function(){
-			            location.href = 'intent://' + param + '#Intent;package=com.nhn.android.band;end';
-			        }, 100);
-			    } else if (navigator.userAgent.match(/(iphone)|(ipod)|(ipad)/i)) {
-			        location.href = 'bandapp://' + param;
-			    }
-			 
-			 /*웹 공유
-			    content = content + " " + url;
-			    var shareUrl = "https://www.band.us/plugin/share?body="+encodeURIComponent(content);
-			    window.open(shareUrl, "share_band", "width=410, height=540, resizable=no");
-			 */   
-			}
-			</script>
 
-		<li><a href="javascript:void(0);" onclick="share_band('무비누림', 'http://localhost:8080/MovieWeb/intro.do');return false;" tooltip="Band"><img
-		src="css/egovframework/img/naverband_icon.JPG" style="width: 25px; height: 25px; margin-top: 7px;"></a></li>
+
+<!-- 		<li><a href="javascript:void(0);" onclick="share_band('무비누림', 'http://localhost:8080/MovieWeb/intro.do');return false;" tooltip="Band"><img -->
+<!-- 		src="css/egovframework/img/naverband_icon.JPG" style="width: 25px; height: 25px; margin-top: 7px;"></a></li> -->
 	</ul>
 </div>
